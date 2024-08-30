@@ -1,0 +1,222 @@
+/* Container for the registration section */
+.register-section {
+    position: relative;
+    max-width: 25rem; 
+    background-color: transparent;
+    border: 0.125rem solid white; 
+    border-radius: 1.25rem; 
+    backdrop-filter: blur(3.4375rem); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fb5607;
+}
+
+/* Styles for the registration form */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading style for the form */
+.register-form h1 {
+    font-family: 'Hatton', sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+/* Container for input boxes */
+.register-form .inputbox {
+    position: relative;
+    margin: 1.875rem 0; 
+    max-width: 19.375rem; 
+    margin-bottom: 0;
+}
+
+/* Label styles for the input boxes */
+.register-form .inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 0.3125rem; /* Converted 5px to 0.3125rem */
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Styles for input fields */
+.register-form .inputbox input {
+    width: 100%;
+    height: 3.75rem; 
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 2.1875rem 0 0.3125rem; 
+    color: white;
+    border-bottom: 0.125rem solid white; 
+}
+
+/* Icon styles for input fields */
+.register-form .inputbox ion-icon {
+    position: absolute;
+    right: 0.5rem; 
+    color: white;
+    font-size: 1.2rem;
+    top: 1.25rem; 
+}
+
+/* Styles for the submit button */
+.register-form button {
+    width: 8.75rem; 
+    height: 2.5rem; 
+    border-radius: 2.5rem; 
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    margin-top: 1.5625rem; 
+}
+
+/* Hover effect for the submit button */
+.register-form button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Styles for the message paragraph */
+.register-form .message {
+    margin-top: 1.25rem; /* Converted 20px to 1.25rem */
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* Loading spinner styles */
+.loading {
+    text-align: center;
+    font-size: 1rem; 
+    color: #333;
+}
+
+/* Styles for the show password button */
+.show-password {
+    position: absolute;
+    right: 0.625rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    transition: color 0.3s;
+}
+
+/* Container for the loading overlay */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    border-radius: 1.25rem; /* Converted 20px to 1.25rem */
+}
+
+/* Animation for the loading spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styles for the timer paragraph */
+.timer {
+    margin-top: 0.9375rem; /* Converted 15px to 0.9375rem */
+    color: #fb5607;
+}
+
+/* Existing styles */
+
+@media (max-width: 768px) {
+    .register-section {
+      max-width: 20rem;
+      padding: 1.5rem 2rem;
+    }
+  
+    .register-form h1 {
+      font-size: 2rem;
+    }
+  
+    .register-form .inputbox {
+      margin: 1rem 0;
+    }
+  
+    .register-form .inputbox input {
+      height: 3rem;
+      padding: 0 1.5rem 0 0.3125rem;
+    }
+  
+    .register-form button {
+      width: 7rem;
+      height: 2rem;
+      font-size: 0.9rem;
+    }
+  
+    .register-form .message {
+      font-size: 0.9rem;
+    }
+  
+    .show-password {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .register-section {
+      max-width: 18rem;
+      padding: 1rem 1.5rem;
+    }
+  
+    .register-form h1 {
+      font-size: 1.5rem;
+    }
+  
+    .register-form .inputbox {
+      margin: 0.5rem 0;
+    }
+  
+    .register-form .inputbox input {
+      height: 2.5rem;
+      padding: 0 1rem 0 0.3125rem;
+    }
+  
+    .register-form button {
+      width: 6rem;
+      height: 1.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .register-form .message {
+      font-size: 0.8rem;
+    }
+  
+    .show-password {
+      font-size: 0.8rem;
+    }
+  }
+  

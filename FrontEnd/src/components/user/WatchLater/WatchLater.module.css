@@ -1,0 +1,292 @@
+.watchLaterContainer {
+  padding: 20px;
+  color: #fff;
+  padding-left: 5rem;
+  overflow-y:auto;
+}
+
+.noFavorites {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.fixedHeader { 
+  padding: 10px;
+  z-index: 1; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  position: relative; 
+  top: 20px; 
+  left: 20px; 
+  right: 20px; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.h2 {
+  font-family: 'Hatton', sans-serif;
+  font-size: 2rem;
+  color: aliceblue;
+  z-index: 1;
+  flex-grow: 1; 
+  margin-top: -2rem;
+  margin-left: -10.5rem;
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  position: absolute; 
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%); 
+  z-index: 1;
+  margin-right: 2rem;
+  margin-top: -0.5rem;
+
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gridItem {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  width: 15rem;
+}
+
+.gridItem:hover {
+  transform: scale(1.05);
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.backgroundImage {
+  width: 15rem;
+  height: 8rem;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.movieTitle {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 8rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+
+/* Checkbox styles */
+.checkbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  background: transparent;
+  border: 2px solid #fb5607;
+  border-radius: 2rem;
+  z-index: 2;
+}
+
+.checkboxAll {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background: transparent;
+  border: 2px solid #fb5607;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #fb5607;
+  border-color: #fb5607;
+}
+
+.checkbox:checked::after {
+  content: '✔';
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selecting .checkbox {
+  visibility: visible;
+}
+
+.checkboxAll:checked {
+  background-color: #fb5607;
+  border-color: #fb5607;
+}
+
+.checkboxAll:checked::after {
+  color: black;
+  transform: translate(-50%, -50%);
+}
+
+/* Delete selected button */
+.deleteSelectedButton {
+  margin-left: 10px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.deleteSelectedButton:hover {
+  background-color: #333;
+}
+
+.selectButton {
+  background-color: #fb5607;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.selectButton:hover {
+  background-color: #333;
+}
+
+.imageContainer.selecting .overlay {
+  opacity: 1;
+}
+
+.watchLaterContainer::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.watchLaterContainer::-webkit-scrollbar-thumb {
+  background-color: #fb5607;
+  border-radius: 10px;
+}
+
+.watchLaterContainer::-webkit-scrollbar-track {
+  background:transparent;
+}
+
+@media (max-width: 768px) {
+  .watchLaterContainer {
+      padding: 1rem;
+      padding-left: 1rem;
+  }
+
+  .fixedHeader {
+      padding: 0.625rem;
+  }
+
+  .h2 {
+      font-size: 1.5rem;
+      margin-top: -1.5rem;
+      margin-left: -7rem;
+  }
+
+  .buttonGroup {
+      margin-right: 1rem;
+  }
+
+  .gridContainer {
+      gap: 1rem;
+  }
+
+  .gridItem {
+      width: 10rem;
+  }
+
+  .backgroundImage {
+      width: 10rem;
+      height: 6rem;
+  }
+
+  .overlay {
+      width: 10rem;
+      height: 6rem;
+  }
+
+  .checkbox {
+      width: 1.5rem;
+      height: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .watchLaterContainer {
+      padding: 0.5rem;
+      padding-left: 0.5rem;
+  }
+
+  .fixedHeader {
+      padding: 0.5rem;
+  }
+
+  .h2 {
+      font-size: 1.25rem;
+      margin-top: -1.25rem;
+      margin-left: -5rem;
+  }
+
+  .buttonGroup {
+      margin-right: 0.5rem;
+  }
+
+  .gridContainer {
+      gap: 0.5rem;
+  }
+
+  .gridItem {
+      width: 8rem;
+  }
+
+  .backgroundImage {
+      width: 8rem;
+      height: 4.5rem;
+  }
+
+  .overlay {
+      width: 8rem;
+      height: 4.5rem;
+  }
+
+  .checkbox {
+      width: 1.25rem;
+      height: 1.25rem;
+  }
+}

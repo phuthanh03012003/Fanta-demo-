@@ -1,0 +1,305 @@
+/* Base styles for the MainContent component */
+.mainSection {
+  position: relative;
+  z-index: 1;
+  height: 88vh;
+}
+
+/* Background image for the main section */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Overlay effect for the background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Content container */
+.content {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem; 
+  margin: 9.375rem 3.75rem; 
+}
+
+/* Styles for the movie poster */
+.poster {
+  width: 18.75rem; 
+  height: auto;
+  border-radius: 0.625rem; 
+  margin-right: 2.5rem; 
+}
+
+/* Container for the movie details */
+.details {
+  max-width: 37.5rem; 
+}
+
+/* Styles for the movie title */
+.title {
+  font-family: 'Hatton', sans-serif;
+  font-size: 3rem; 
+  font-weight: bold;
+  margin-bottom: 0.625rem; 
+}
+
+/* Container for meta information */
+.meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  width: 100dvw;
+}
+
+.meta span {
+  margin-right: 0.9375rem; /* Converted 15px to 0.9375rem */
+  font-size: 1rem; 
+  padding: 0.3125rem 0.625rem; 
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3125rem; 
+}
+
+/* Background color styles for various meta information */
+.rating {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.quality {
+  background-color: #00cc66;
+}
+
+.genres {
+  background-color: #0066cc;
+}
+
+.releaseDate, .duration {
+  background-color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for director and cast information */
+.director, .cast {
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+/* Styles for movie description */
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem; 
+}
+
+/* Styles for the watch now button */
+.watchNowButton {
+  padding: 0.625rem 1.25rem; 
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #fb5607;
+  border: none;
+  border-radius: 0.3125rem; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.watchNowButton:hover {
+  background-color: #333;
+}
+
+/* Styles for the director label */
+.dir {
+  color: #fb5607;
+}
+
+/* Container for the trailer section */
+.trailerSection {
+  padding: 1.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10rem;
+  width: 25%; 
+  height: 100%; 
+  z-index: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Favorite section*/
+
+.addToFavouriteContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  position: relative; 
+}
+
+/* Styles for the favourite text */
+.favouriteText {
+  text-align: center;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styles for the add to favourite button */
+.addToFavouriteButton {
+  border: none;
+  cursor: pointer;
+  background: #fb5607;
+  padding-right: 0.3rem;
+  padding-top: 0.3rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.addToFavouriteButton:hover {
+  background-color: #333;
+}
+
+/* Styles for the bookmark icon */
+.bookmarkIcon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../../../assets/images/archive_no_bg.png');
+  background-size: cover;
+  display: inline-block;
+  margin-right: 0.15rem;
+  margin-left: 0.15rem;
+}
+
+.bookmarkIconActive {
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../../../assets/images/archive_filled_no_bg.png');
+  background-size: cover;
+  filter: brightness(0);
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+
+/* Container for the add to favourite button */
+.addToFavouriteContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+}
+
+/* Styles for the hover box */
+.hoverBox {
+  font-size: 0.8rem;
+  background-color: #333;
+  display: none;
+  position: absolute;
+  top: 1.2rem; 
+  left: 3rem; 
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 1000; 
+  white-space: nowrap;
+}
+
+.addToFavouriteContainer:hover .hoverBox {
+  display: block;
+}
+
+/* Container for the title */
+.titleContainer {
+  display: flex;
+  align-items: center;
+  width: 100dvw;
+}
+
+.clockicon {
+  font-size: 1rem;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .mainSection {
+    height: 100vh;
+    padding: 1rem; /* Add padding for mobile view */
+  }
+
+  .background {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .poster {
+    width: 12rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .details {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .meta {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .meta span {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .director, .cast, .description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .watchNowButton {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .trailerSection {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    visibility: hidden;
+  }
+}

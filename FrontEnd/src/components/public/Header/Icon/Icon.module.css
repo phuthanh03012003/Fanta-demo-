@@ -1,0 +1,154 @@
+/* Icon.module.css */
+.userContainer {
+  position: relative;
+  margin-right: 4rem;
+}
+
+.userIcon {
+  position: relative;
+  cursor: pointer;
+}
+
+.userIcon img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 3.5rem;
+  left: 50%; /* Căn giữa dropbox theo chiều ngang */
+  transform: translateX(-50%) translateY(-0.625rem); /* Dịch chuyển dropbox để căn giữa và áp dụng hiệu ứng đi xuống */
+  background-color: #333;
+  color: #fff;
+  padding: 0.625rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.3125rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdownVisible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Chỉ thay đổi trục Y khi hiển thị */
+  pointer-events: auto;
+}
+
+.loginButton, .adminButton, .userButton, .watchlaterButton, .logoutButton {
+  margin-top: 0.3125rem;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 0.3125rem;
+  background-color: #fb5607;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+  padding: 0.3125rem 0.625rem;
+  display: flex;
+  align-items: center;  
+  margin-bottom: 0.3rem;
+}
+
+.loginButton{
+  justify-content: space-evenly;
+}
+
+.loginButton:hover,
+.userButton:hover,
+.adminButton:hover,
+.logoutButton:hover,
+.watchlaterButton:hover {
+  background-color: #333;
+  color: #fb5607;
+}
+
+.adminpic {
+  border-radius: 2rem;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.watchlatericon{
+  margin-left: -0.3rem;
+  margin-right: 0.2rem;
+  font-size: 2rem;
+
+}
+.logouticon{
+  margin-left: 0.1rem;
+  font-size: 1.4rem;
+  margin-right: 1.3rem;
+}
+
+/* Existing styles */
+
+@media (max-width: 768px) {
+  .userContainer {
+    margin-right: 2rem;
+  }
+
+  .userIcon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .dropdown {
+    top: 3rem;
+  }
+
+  .loginButton, .adminButton, .userButton, .watchlaterButton, .logoutButton {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .watchlatericon, .logouticon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .userContainer {
+    margin-right: 1rem;
+  }
+
+  .userIcon img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .dropdown {
+    top: 2.5rem;
+  }
+
+  .loginButton, .adminButton, .userButton, .watchlaterButton, .logoutButton {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.7rem;
+  }
+
+  .icon {
+    font-size: 0.9rem;
+  }
+
+  .watchlatericon, .logouticon {
+    font-size: 1.2rem;
+  }
+}

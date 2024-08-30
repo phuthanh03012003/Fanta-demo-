@@ -1,0 +1,157 @@
+.historyContainer {
+  position: relative;
+  margin-right: 7rem;
+}
+
+.historyButton {
+  padding: 0rem 0.625rem;
+  font-size: 2rem;
+  background: transparent;
+  color: #fb5607;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1010;
+}
+
+.historyButton:hover {
+  color: #333;
+}
+
+.historyGap {
+  position: absolute;
+  top: 2rem;
+  left: -0.4rem;
+  width: 4rem; /* Same width as the dropdown */
+  height: 1rem; /* Height of the gap */
+  z-index: 999; /* Ensure it is above other elements */
+}
+
+.historyDropdown {
+  position: absolute;
+  top: 3rem; /* Increased to create space between the icon and the dropdown */
+  transform: translateX(-42.5%);
+  background-color: #333;
+  color: #fff;
+  padding: 0.625rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.3125rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  max-height: 30rem;
+  overflow-y: auto;
+  cursor: pointer;
+
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  transition: background-color 0.3s ease;
+}
+
+.historyItem:hover {
+  background-color: #444;
+}
+
+.backgroundImage {
+  width: 8rem;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 0.3125rem;
+}
+
+.historyDetails {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.movieTitle {
+  font-size: 1rem;
+  color: #fb5607;
+  margin: 0;
+}
+
+.episodeInfo {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.progressBar {
+  width: 100%;
+  background-color: #ccc;
+  height: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 5px;
+  position: relative;
+}
+
+.historyIcon{
+  font-size: 2.5rem;
+}
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.progressTime {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.showMoreButton {
+  background-color: #fb5607;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.showMoreButton:hover {
+  background-color: #333;
+}
+
+.historyMessage {
+  text-align: center;
+  color: white;
+}
+
+.historyMessageIcon {
+  font-size: 48px;
+  margin-bottom: 0.25rem;
+}
+
+.historyMessageText {
+  margin-bottom: 20px;
+}
+
+.historyLoginButton {
+  background-color: #fb5607;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.historyLoginButton:hover{
+  transition: background-color 0.3s ease;
+  background-color: #1A2130;
+}
+

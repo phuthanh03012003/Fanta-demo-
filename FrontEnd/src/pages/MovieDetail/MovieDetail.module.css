@@ -1,0 +1,20 @@
+/* MovieDetail.module.css */
+
+.movieDetailContainer {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  color: #ffffff;
+  z-index: 0;
+  display: flex;
+  flex-direction: column; /* Ensure the sections stack vertically */
+  overflow: hidden;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .movieDetailContainer {
+    padding: 0.5rem;
+    overflow-x: hidden;
+  }
+}

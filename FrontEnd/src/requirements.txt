@@ -1,0 +1,15 @@
+npm install react-icons
+npm install react-router-dom
+npm install @react-oauth/google
+npm install react-facebook-login --legacy-peer-deps
+npm install react-youtube
+npm install moment --force
+npm install react-modal --force
+npm install react-toastify --force 
+
+color (orange):#fb5607
+color (gray): #333
+color (navi): #101a2e
+
+Color reference: https://coolors.co/palettes/trending
+

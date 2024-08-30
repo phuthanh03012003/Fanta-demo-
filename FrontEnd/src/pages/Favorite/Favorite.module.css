@@ -1,0 +1,457 @@
+.bodyFav{
+  background: url(../../assets/images/streaming.jpg);
+  width: 100dvw;
+  background-size: cover;
+  padding-top: 6rem;
+}
+/* Container for the entire favorite movies section */
+.favoriteContainer {
+  border: 0.1rem solid white;
+
+  color: white;
+  padding: 20px;
+  width: 70vw;
+  height: 90vh; 
+  background-color: rgba(0, 0, 0, 0.75); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; 
+}
+
+.h2 {
+  font-family: 'Hatton', sans-serif;
+  font-size: 2rem;
+  color: aliceblue;
+  z-index: 1;
+  flex-grow: 1; 
+  margin-left: 3rem;
+  text-align: center;
+}
+
+/* Header that will be fixed at the top */
+.fixedHeader { 
+  padding: 10px;
+  z-index: 1; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  right: 20px; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+.showAllButton {
+  background-color: #fb5607; 
+  color: white; 
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 1rem; 
+  cursor: pointer; 
+  margin-right: auto; 
+  position: absolute;
+  left: 0;
+}
+
+.showAllButton:hover {
+  background-color: #333; 
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  position: absolute; 
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%); 
+  z-index: 1;
+}
+
+/* Content inside the container that can scroll */
+.scrollableContent {
+  width: 100%;
+  height: calc(100% - 100px); 
+  overflow-y: auto; 
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 4rem; 
+}
+
+/* Custom Scrollbar Styles */
+.favoriteContainer::-webkit-scrollbar, .scrollableContent::-webkit-scrollbar {
+  width: 10px;
+}
+
+.favoriteContainer::-webkit-scrollbar-thumb, .scrollableContent::-webkit-scrollbar-thumb {
+  background-color: #ff4500;
+  border-radius: 10px;
+}
+
+.favoriteContainer::-webkit-scrollbar-track, .scrollableContent::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* Layout for each movie row in the watchlist */
+.movieRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  width: 90%; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+/* Container for the movie poster */
+.posterContainer {
+  position: relative;
+}
+
+/* Styling for the movie poster image */
+.poster {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+/* Scale up the poster image on hover */
+.posterContainer:hover .poster {
+  transform: scale(1.1);
+}
+
+/* Styling for the watch button */
+.watchButton {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: #fb5607;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+/* Show the watch button on poster hover */
+.posterContainer:hover .watchButton {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Change background color of watch button on hover */
+.posterContainer:hover .watchButton:hover {
+  background-color: #333;
+}
+
+/* Container for the movie information */
+.movieInfo {
+  flex: 1;
+}
+
+/* Styling for the movie title */
+.movieInfo h2 {
+  margin: 0 0 10px;
+}
+
+/* Styling for the movie description paragraphs */
+.movieInfo p {
+  margin: 5px 0;
+  width: 75%;
+}
+
+/* Styling for the movie title color */
+.title {
+  color: #fb5607;
+}
+
+/* Styling cho nút Edit */
+.editButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #fb5607;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background-color: #fb5607;
+  border-radius: 1rem;
+  z-index: 1;
+  border: 0.1rem #fb5607 solid;
+}
+
+/* Dropdown buttons */
+.dropdownButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #fb5607;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.dropdownButton:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Checkbox styles */
+.checkboxWrapper {
+  position: relative;
+  width: 20px; /* Set the width to reserve space */
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.checkbox {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  visibility: hidden; /* Initially hidden */
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background:transparent;
+  border: 2px solid #fb5607;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.checkboxAll{
+  margin-right: 0.5rem;
+}
+
+.checkbox:checked {
+  background-color: #fb5607;
+  border-color: #fb5607;
+}
+
+.checkbox:checked::after {
+  content: '✔';
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkboxAll {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background:transparent;
+  border: 2px solid #fb5607;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.checkboxAll:checked {
+  background-color: #fb5607;
+  border-color: #fb5607;
+}
+
+.selecting .checkbox {
+  visibility: visible;
+}
+
+/* Delete selected button */
+.deleteSelectedButton {
+  margin-left: 10px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.deleteSelectedButton:hover {
+  background-color: #333;
+}
+
+.selectButton {
+  background-color: #fb5607;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.selectButton:hover {
+  background-color: #333;
+}
+
+/* Existing styles */
+
+@media (max-width: 768px) {
+  .bodyFav {
+    padding-top: 3rem;
+  }
+
+  .favoriteContainer {
+    width: 90vw;
+    height: auto;
+    padding: 10px;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .fixedHeader {
+    flex-direction: column;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .buttonGroup {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .scrollableContent {
+    height: auto;
+    padding: 5px;
+  }
+
+  .movieRow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .posterContainer {
+    margin-bottom: 10px;
+  }
+
+  .poster {
+    width: 100px;
+    height: auto;
+  }
+
+  .watchButton {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .movieInfo {
+    width: 100%;
+  }
+
+  .movieInfo p {
+    width: 100%;
+  }
+
+  .editButton {
+    right: 10px;
+    top: 5px;
+    padding: 5px 10px;
+  }
+
+  .dropdown {
+    right: 10px;
+    top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bodyFav {
+    padding-top: 2rem;
+  }
+
+  .favoriteContainer {
+    width: 95vw;
+    padding: 5px;
+  }
+
+  .h2 {
+    font-size: 1.2rem;
+  }
+
+  .fixedHeader {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scrollableContent {
+    padding: 5px;
+  }
+
+  .movieRow {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .poster {
+    width: 80px;
+  }
+
+  .watchButton {
+    padding: 5px 10px;
+  }
+
+  .editButton {
+    padding: 5px;
+  }
+
+  .dropdown {
+    top: 25px;
+  }
+}
